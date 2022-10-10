@@ -1,0 +1,15 @@
+.container {
+  max-width: var(--column-width);
+  margin: 0 auto;
+  padding: 2rem;
+
+  p {
+    font-size: var(--fsz-m);
+    color: var(--clr-primary);
+    line-height: 150%;
+  }
+
+  p + p {
+    margin-top: 1rem;
+  }
+}

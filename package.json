@@ -1,7 +1,11 @@
 {
-  "name": "market-with-cart",
+  "name": "news-site",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "~16.4.2",
+    "yarn": "3.2.4"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
