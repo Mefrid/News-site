@@ -1,0 +1,25 @@
+@use "styles/mixins.scss" as mixins;
+
+.header {
+  border-bottom: 1px solid var(--clr-primary);
+}
+
+.nav-wrapper {
+  background-color: var(--clr-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--column-width);
+  margin: 0 auto;
+
+  @include mixins.mobile {
+    margin: 0 0.5rem;
+  }
+}
+
+.links-container {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}

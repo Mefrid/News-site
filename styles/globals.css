@@ -1,9 +1,25 @@
+:root {
+  --clr-primary: rgb(20, 20, 20);
+  --clr-semi-primary: rgb(204, 204, 204);
+  --clr-secondary: rgb(253, 253, 253);
+  --clr-accent: rgb(184, 0, 0);
+
+  --fsz-s: 0.9rem;
+  --fsz-m: 1.2rem;
+  --fsz-l: 2rem;
+  --fsz-xl: 3rem;
+}
+
+#__next {
+  height: 100%;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  height: 100%;
 }
 
 a {
@@ -13,14 +29,10 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+img {
+  width: 100%;
 }

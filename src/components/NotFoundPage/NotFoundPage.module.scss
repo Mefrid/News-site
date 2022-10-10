@@ -1,0 +1,17 @@
+.container {
+  height: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: 2rem;
+}

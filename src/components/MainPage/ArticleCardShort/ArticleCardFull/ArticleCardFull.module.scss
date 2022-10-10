@@ -1,0 +1,68 @@
+.card-full {
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: min(600px, 100%);
+  border-radius: 2rem;
+  border: 0;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.card-close-btn {
+  --border-gap: 1rem;
+
+  position: absolute;
+  top: var(--border-gap);
+  right: var(--border-gap);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.card-image {
+  max-height: 30vh;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: var(--fsz-m);
+  color: var(--clr-primary);
+}
+
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-small-info {
+  color: var(--clr-primary);
+  font-size: var(--fsz-s);
+}
+
+.card-description {
+  color: var(--clr-primary);
+  font-size: var(--fsz-m);
+}
+
+.card-link-wrapper {
+  margin-top: 0.5rem;
+  width: min-content;
+}
+
+.card-link {
+  color: var(--clr-primary);
+  white-space: nowrap;
+  background-color: transparent;
+  border: 1px solid var(--clr-primary);
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: var(--fsz-m);
+  padding: 0.5rem;
+}

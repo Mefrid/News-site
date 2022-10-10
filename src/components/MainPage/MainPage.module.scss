@@ -1,0 +1,30 @@
+@use 'styles/mixins.scss' as mixins;
+
+.wrapper {
+  height: 100%;
+  max-width: var(--column-width);
+  margin: 2rem auto;
+  
+  @include mixins.mobile {
+    margin: 1rem 0.5rem;
+  }
+}
+
+.title {
+  font-size: var(--fsz-l);
+  color: var(--clr-primary);
+  margin-bottom: 0.5em;
+
+  @include mixins.mobile {
+    font-size: var(--fsz-m);
+  }
+}
+
+.cards-container {
+  --columns-count: 3;
+
+  display: grid;
+  // grid-template-columns: repeat(var(--columns-count), 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}

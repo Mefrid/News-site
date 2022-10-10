@@ -1,0 +1,55 @@
+@use "styles/mixins.scss" as mixins;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--clr-primary);
+  padding: 0.5rem;
+  border-radius: 5rem;
+
+  svg {
+    cursor: pointer;
+  }
+
+  @include mixins.mobile {
+    padding: 0.2rem;
+    border-radius: 1rem;
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
+
+.input,
+.input:active,
+.input:focus {
+  border: 0;
+  appearance: none;
+  outline: none;
+}
+
+.input {
+  font-size: var(--fsz-m);
+  transition: width 400ms ease-in-out, padding 400ms ease-in-out;
+  overflow: hidden;
+  transform-origin: right;
+  padding: 0;
+  width: 0;
+
+  @include mixins.mobile {
+    font-size: var(--fsz-s);
+  }
+  
+  &:focus,
+  &.has-value {
+    width: 17.2rem;
+    padding: 0 0.5rem;
+
+    @include mixins.mobile {
+      padding: 0;
+      width: 8rem;
+    }
+  }
+}

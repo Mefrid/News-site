@@ -1,0 +1,71 @@
+@use 'styles/mixins.scss' as mixins;
+
+.card-short {
+  position: relative;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(0deg, black, transparent 90%);
+    transition: translate 300ms ease-out;
+    translate: 0 20%;
+    
+    @include mixins.mobile {
+      translate: 0;
+    }
+  }
+
+  &:hover {
+    &::before {
+      translate: 0;
+    }
+    
+    .card-media {
+      scale: 1.05;
+    }
+  }
+}
+
+.card-media {
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transition: scale 300ms ease-out;
+}
+
+.card-media-placeholder {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.card-title {
+  color: var(--clr-secondary);
+  font-size: var(--fsz-m);
+}
+
+.card-additional-info {
+  margin-top: 0.5rem;
+  color: var(--clr-semi-primary);
+  font-size: var(--fsz-s);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

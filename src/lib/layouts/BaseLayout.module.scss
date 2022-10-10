@@ -1,0 +1,18 @@
+@use "styles/mixins.scss" as mixins;
+
+.layout {
+  --column-width: 80vw;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  @include mixins.mobile {
+    --column-width: 100%;
+  }
+}
+
+.page-content {
+  flex-grow: 1;
+  background-color: var(--clr-secondary);
+}
